@@ -344,7 +344,7 @@ const metricsList = [
   { key: 'interactivity', label: '评论互动潜能 (Interactivity)' }
 ];
 
-const aiScores = ref<{ clickRate: number; seedingValue: number; readability: number; tagRelevance: number; interactivity: number; } | null>(null);
+const aiScores = ref<Record<string, number> | null>(null);
 
 const styleOptions = [
   { label: '爆款种草测评 (高转化/直击功效痛点/对比前后差异/情绪拉满)', value: '爆款种草测评' },
@@ -362,7 +362,7 @@ interface HistoryItem {
   destination: string;
   input: string;
   styleLabel: string;
-  aiScores: { clickRate: number; seedingValue: number; readability: number; tagRelevance: number; interactivity: number; } | null;
+  aiScores: Record<string, number> | null;
   output: string;
 }
 
